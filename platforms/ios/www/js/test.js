@@ -3,4 +3,10 @@ function clickFunc(){
     alert('这里是iOS工作室');
 }
 var button1 = document.getElementById('button1');
-button1.addEventListener('click',clickFunc,false);
+if(button1) {
+    button1.addEventListener('click',clickFunc,false);
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+    alert("We really do think that you are the best.")
+},false);
