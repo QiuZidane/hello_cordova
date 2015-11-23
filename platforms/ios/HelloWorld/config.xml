@@ -11,7 +11,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
-    <feature name="LocalStorage">
+    <feature name="LocalStorage"> <!--域限制设置。应用中如果读取其他域中的HTML文件，而该文件中如果使用了cordova.js，那么他就能访问手机的本地功能。 -->
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
     <allow-intent href="itms:*" />
@@ -23,8 +23,8 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
-    <content src="html/Hello_Wrold.html" />
-    <access origin="*" />
+    <content src="html/Hello_Wrold.html" /><!--应用的入口文件。默认是index.html -->
+    <access origin="*" /><!--域限制设置。应用中如果读取其他域中的HTML文件，而该文件中如果使用了cordova.js，那么他就能访问手机的本地功能-->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
